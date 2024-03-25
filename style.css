@@ -16,13 +16,18 @@
 html,body{
     width:100%;
     height: 100%;
-    background-color: #EFEAE3;
+   
     
+}
+#main{
+    z-index: 10;
+    position: relative;
 }
 #page1{
     min-height: 100vh;
     width: 100%;
     padding: 25px;
+    background-color: #EFEAE3;
 
 }
 #page2{
@@ -30,6 +35,7 @@ html,body{
     width: 100%;
     padding: 8vw 0vw;
     position: relative;
+    background-color: #EFEAE3;
     
 }
 
@@ -278,6 +284,7 @@ video {
 #page3{
     min-height: 100vh;
     width: 100%;
+    background-color: #EFEAE3;
 }
 
 .elem{
@@ -317,15 +324,152 @@ video {
     border :1px solid #000;
     border-radius: 10px;
     background-color: transparent;
+    z-index: 11;
     
     
     top: 25%;
     left: 50%;
-    z-index: 2;
     position: fixed;
     display: none;
     background-size: cover;
     object-fit: cover;
     
 
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    padding: 35px;
+    background-color: #EFEAE3;
+}
+#box{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    border-radius: 35px;
+    display: flex;
+}
+
+#boxleft{
+    width: 50%;
+    background-color:#000;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    align-items: start;
+    justify-content: center ;
+
+}
+#boxleft h1{
+    padding-left: 10px;
+   
+    margin-left: 15%;
+    font-size: 8vh;
+}
+
+
+
+#boxleft p{
+    color: #fff;
+    font-family: thinfont;
+    font-size: 13px;
+    margin-top: 8%;
+    width: 70%;
+    margin-left: 15%;
+
+}
+#boxright{
+    height: 100vh;
+    width: 60%;
+    border-radius: 15px;
+   background-image: url("https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project-p-1080.jpg");
+    background-size: cover;
+    background-position-x: 100%;
+
+}
+#t1{
+    border-left: 3px solid rgba(128, 128, 128, 0.677);
+    color: #fff;
+}
+#t2{
+    border-left: 3px solid rgba(128, 128, 128, 0.679);
+    color: rgba(128, 128, 128, 0.677);
+}
+#t3{
+    border-left: 3px solid rgba(128, 128, 128, 0.678);
+    color: rgba(128, 128, 128, 0.677);
+}
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+}
+#footer{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    
+}
+
+#footer h1{
+    font-size: 220px;
+    color:#fff;
+    z-index: 12;
+}
+
+#cutout{
+    position: absolute;
+    bottom: 0;
+    
+    width: 100%; /* Adjust the width of the cutout */
+    height: 300px; /* Adjust the height of the cutout */
+    background-color: #000; /* Adjust the color of the cutout */
+    border-top-left-radius: 150%; /* Half of the width to make it semicircular */
+    border-top-right-radius: 150%; /* Half of the width to make it semicircular */
+    transform: translateX(-50%);
+    filter: blur(20px);
+    animation-name: foot;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+   
+    
+}
+#ani{
+    margin-bottom: 10%;
+    position: absolute;
+    height: 600px;
+    filter: blur(25px);
+    width: 100%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(237,3,32,0.87) 20.8%, rgba(242,121,1,0.84) 74.4% );
+    animation: footer;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+   
+}
+@keyframes footer{
+    from{
+        transform: translate(0%,-10%) skew(-10deg);
+    }
+    to{
+        transform: translate(0%,0%) skew(20deg);
+    }
+}
+@keyframes foot {
+    from{
+        transform: translate(0%,-10%) skew(0deg);
+    }
+    to{
+        transform: translate(0%,0%) skew(10deg);
+    }
 }
